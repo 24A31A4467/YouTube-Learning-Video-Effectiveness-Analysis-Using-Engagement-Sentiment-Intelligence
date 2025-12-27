@@ -1,19 +1,53 @@
-This directory includes a few sample datasets to get you started.
+# YouTube Learning Video Effectiveness Analysis Using Engagement & Sentiment Intelligence
 
-*   `california_housing_data*.csv` is California housing data from the 1990 US
-    Census; more information is available at:
-    https://docs.google.com/document/d/e/2PACX-1vRhYtsvc5eOR2FWNCwaBiKL6suIOrxJig8LcSBbmCbyYsayia_DvPOOBlXZ4CAlQ5nlDD8kTaIDRwrN/pub
+## 📌 Project Overview
+An end-to-end analytics system that evaluates the effectiveness of educational YouTube videos using real-time engagement metrics, engagement velocity (views/day, likes/day), and NLP-based sentiment analysis of comments.
 
-*   `mnist_*.csv` is a small sample of the
-    [MNIST database](https://en.wikipedia.org/wiki/MNIST_database), which is
-    described at: http://yann.lecun.com/exdb/mnist/
+## ❓ Problem Statement
+Learners struggle to identify high-quality educational videos due to misleading view counts and subjective opinions. There is no objective, data-driven method to assess learning effectiveness.
 
-*   `anscombe.json` contains a copy of
-    [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet); it
-    was originally described in
+## 💡 Solution
+This project analyzes YouTube videos using:
+- Engagement velocity (views/day, likes/day, comments/day)
+- User interaction strength
+- Sentiment analysis of comments using NLP
 
-    Anscombe, F. J. (1973). 'Graphs in Statistical Analysis'. American
-    Statistician. 27 (1): 17-21. JSTOR 2682899.
+The system classifies videos as **Highly Effective**, **Moderately Effective**, or **Low Effectiveness**.
 
-    and our copy was prepared by the
-    [vega_datasets library](https://github.com/altair-viz/vega_datasets/blob/4f67bdaad10f45e3549984e17e1b3088c731503d/vega_datasets/_data/anscombe.json).
+## 🚀 Key Features
+- Real-time YouTube Data API integration
+- Engagement normalization by video age
+- NLP-based sentiment analysis (VADER)
+- Interactive Streamlit dashboard
+- Clear effectiveness scoring & classification
+
+## 🛠 Tech Stack
+- Python
+- YouTube Data API v3
+- Streamlit
+- NumPy, Pandas
+- NLTK (VADER Sentiment Analysis)
+
+## ▶️ How to Run the Project
+1. Clone the repository  
+2. Install dependencies  
+   ```bash
+   pip install -r requirements.txt
+3.Set your YouTube API key as an environment variable
+4.Run the app
+python -m streamlit run app.py
+📊 Output
+Displays video metadata (views, likes, comments)
+Shows sentiment score
+Calculates effectiveness score
+Classifies learning effectiveness
+
+⚠️ Limitations
+Depends on publicly available comments
+Cannot measure actual learning outcomes
+API quota limits apply
+
+🔮 Future Enhancements
+ML-based effectiveness prediction
+Topic-wise learning quality comparison
+Viewer retention analysis
